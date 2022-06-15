@@ -64,6 +64,10 @@ export const useStyles = makeStyles((theme: Theme) => ({
     height: "44px",
     padding: "0 12px",
     borderBottom: "1px solid #eeeeee",
+    cursor: "pointer",
+    "&:hover":{
+      opacity: 0.5,
+    },
   },
   itemTitle: {
     color: "#9ab0bc",
