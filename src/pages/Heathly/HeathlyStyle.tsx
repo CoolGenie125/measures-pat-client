@@ -60,6 +60,7 @@ export const HeathlyStyles = makeStyles((theme: Theme) =>
     categoryHeaderRoot: {
       display: "flex",
       flexFlow: "nowrap",
+      padding: "12px 0",
       overflowX: "scroll",
       [theme.breakpoints.down(840)]: {
         display: "none",
