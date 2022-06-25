@@ -138,6 +138,7 @@ export const SidebarStyles = makeStyles((theme: Theme) =>
       alignItems: "center",
       justifyContent: "center",
       padding: "0 12px",
+      cursor: "pointer",
     },
     banner: {
       width: "97px",
