@@ -26,7 +26,6 @@ export default function Header({ mobileAction }: HeaderProps) {
   };
 
   const searchAction = (e: any) => {
-    console.log("inout value", e);
   };
 
   return (

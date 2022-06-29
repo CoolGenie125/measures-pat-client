@@ -6,7 +6,7 @@ import landLetter from "assets/images/landing-letter.webp";
 import { Grid } from "@material-ui/core";
 import ActionButton from "components/ActionButton/ActionButton";
 import { Reveal } from "react-awesome-reveal";
-import { letterDownUp, letterUpDown, slideImg } from "config/utils";
+import { letterDownUp, slideImg } from "config/utils";
 
 export const Landing = () => {
   const classes = LandingStyle();
@@ -29,16 +29,15 @@ export const Landing = () => {
             <LinkLetter />
           </div>
         </Reveal>
-
         <div className={classes.CardContainer}>
           <Grid container>
-            <Grid item md={4} sm={6} xs={12}>
+            <Grid item xl={4} md={6} sm={12} xs={12}>
               <ServiceCard />
             </Grid>
-            <Grid item md={4} sm={6} xs={12}>
+            <Grid item xl={4} md={6} sm={12} xs={12}>
               <ServiceCard />
             </Grid>
-            <Grid item md={4} sm={6} xs={12}>
+            <Grid item xl={4} md={6} sm={12} xs={12}>
               <ServiceCard />
             </Grid>
           </Grid>
@@ -58,13 +57,13 @@ export const Landing = () => {
         </Reveal>
         <div className={classes.CardContainer}>
           <Grid container>
-            <Grid item md={4} sm={6} xs={12}>
+            <Grid item xl={4} md={6} sm={12} xs={12}>
               <ServiceCard />
             </Grid>
-            <Grid item md={4} sm={6} xs={12}>
+            <Grid item xl={4} md={6} sm={12} xs={12}>
               <ServiceCard />
             </Grid>
-            <Grid item md={4} sm={6} xs={12}>
+            <Grid item xl={4} md={6} sm={12} xs={12}>
               <ServiceCard />
             </Grid>
           </Grid>
@@ -81,9 +80,7 @@ export const Landing = () => {
                 <div></div>
               </Reveal>
               <div className={classes.service1}>
-                <Reveal
-                  keyframes={letterDownUp}
-                  triggerOnce>
+                <Reveal keyframes={letterDownUp} triggerOnce>
                   <div className={classes.serviceTitle}>
                     施策ぱっとの<br></br> 使い方
                   </div>
@@ -104,9 +101,7 @@ export const Landing = () => {
                 <div></div>
               </Reveal>
               <div className={classes.service2}>
-                <Reveal
-                  keyframes={letterDownUp}
-                  triggerOnce>
+                <Reveal keyframes={letterDownUp} triggerOnce>
                   <div className={classes.serviceTitle}>
                     運営への<br></br> お問い合わせ
                   </div>

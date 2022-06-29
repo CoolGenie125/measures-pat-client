@@ -60,16 +60,16 @@ export const Healthy = () => {
         </div>
         <Reveal keyframes={appear} triggerOnce delay={2000}>
           <Grid container>
-            <Grid item md={4} sm={6} xs={12}>
+            <Grid item xl={4} md={6} sm={12} xs={12}>
               <ServiceCard delay={2500} />
             </Grid>
-            <Grid item md={4} sm={6} xs={12}>
+            <Grid item xl={4} md={6} sm={12} xs={12}>
               <ServiceCard delay={2500} />
             </Grid>
-            <Grid item md={4} sm={6} xs={12}>
+            <Grid item xl={4} md={6} sm={12} xs={12}>
               <ServiceCard delay={2500} />
             </Grid>
-            <Grid item md={4} sm={6} xs={12}>
+            <Grid item xl={4} md={6} sm={12} xs={12}>
               <ServiceCard delay={2500} />
             </Grid>
           </Grid>

@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { slideImg } from "config/utils";
 import Reveal from "react-awesome-reveal";
 import backImg from "./../../assets/images/2.png";
@@ -5,13 +6,14 @@ import { ServiceCardStyles } from "./ServiceCardStyles";
 
 interface ServiceCardProps {
   delay?: number;
+  className?: any;
 }
 
-export default function ServiceCard({ delay }: ServiceCardProps) {
+export default function ServiceCard({ delay, className }: ServiceCardProps) {
   const classes = ServiceCardStyles();
 
   return (
-    <div className={classes.root}>
+    <div className={clsx(classes.root, className)}>
       <div className={classes.imgRoot}>
         <Reveal
           keyframes={slideImg}

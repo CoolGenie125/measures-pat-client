@@ -88,6 +88,9 @@ export const LandingStyle = makeStyles((theme: Theme) =>
       display: "flex",
       alignItems: "center",
       justifyContent: "space-around",
+      flexWrap: "wrap",
+      transitionDelay: "300ms",
+      transitionDuration: "1000ms",
     },
     serviceRoot: {
       padding: "48px",

@@ -12,31 +12,31 @@ export const SidbarData = [
       routers: [
         {
           name: "食事・美容",
-          link: "/private/healthy",
+          link: "/category",
         },
         {
           name: "ジム・マッサージ",
-          link: "/private/healthy",
+          link: "/category",
         },
         {
           name: "旅行・レジャー",
-          link: "/private/healthy",
+          link: "/category",
         },
         {
           name: "引越し",
-          link: "/private/healthy",
+          link: "/category",
         },
         {
           name: "家事・育児",
-          link: "/private/healthy",
+          link: "/category",
         },
         {
           name: "介護・福祉",
-          link: "/private/healthy",
+          link: "/category",
         },
         {
           name: "その他",
-          link: "/private/healthy",
+          link: "/category",
         },
       ],
     },
@@ -49,31 +49,31 @@ export const SidbarData = [
       routers: [
         {
           name: "ITツール利用",
-          link: "/private/healthy",
+          link: "/category",
         },
         {
           name: "システム開発",
-          link: "/private/healthy",
+          link: "/category",
         },
         {
           name: "WEB制作",
-          link: "/private/healthy",
+          link: "/category",
         },
         {
           name: "資料作成",
-          link: "/private/healthy",
+          link: "/category",
         },
         {
           name: "士業業務代行",
-          link: "/private/healthy",
+          link: "/category",
         },
         {
           name: "健康診断",
-          link: "/private/healthy",
+          link: "/category",
         },
         {
           name: "その他",
-          link: "/private/healthy",
+          link: "/category",
         },
       ],
     },

@@ -51,7 +51,7 @@ export default function Layout() {
           <Route path='/account' element={<Account />} />
           <Route path='/account/setting' element={<AccountSetting />} />
           <Route path='/account/setting/thankyou' element={<ThankYou />} />
-          <Route path='/private/healthy' element={<Healthy />} />
+          <Route path='/category' element={<Healthy />} />
           <Route path='/usage' element={<Usage />} />
           <Route path='/usage/contact' element={<Contact />} />
           <Route path='/404' element={<ErrorRoute />} />
