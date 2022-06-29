@@ -7,13 +7,18 @@ import { ServiceCardStyles } from "./ServiceCardStyles";
 interface ServiceCardProps {
   delay?: number;
   className?: any;
+  action?: () => void;
 }
 
-export default function ServiceCard({ delay, className }: ServiceCardProps) {
+export default function ServiceCard({
+  delay,
+  className,
+  action,
+}: ServiceCardProps) {
   const classes = ServiceCardStyles();
 
   return (
-    <div className={clsx(classes.root, className)}>
+    <div className={clsx(classes.root, className)} onClick={action}>
       <div className={classes.imgRoot}>
         <Reveal
           keyframes={slideImg}

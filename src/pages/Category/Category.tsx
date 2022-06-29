@@ -1,14 +1,18 @@
+/** @format */
+
 import { Grid } from "@material-ui/core";
 import Breadcrumbs from "components/Breadcrumbs/Breadcrumbs";
 import ServiceCard from "components/ServiceCard/ServiceCard";
 import { appear, letterDownUp } from "config/utils";
 import { useState } from "react";
 import Reveal from "react-awesome-reveal";
+import { useNavigate } from "react-router-dom";
 import CategoryModal from "./CategoryModal/CategoryModal";
-import { HeathlyStyles } from "./HeathlyStyle";
+import { useStyles } from "./CategoryStyle";
 
-export const Healthy = () => {
-  const classes = HeathlyStyles();
+export const Category = () => {
+  const classes = useStyles();
+  const navigate = useNavigate();
 
   const [showCategoryModal, setShowCategoryModal] = useState(false);
 
@@ -25,6 +29,10 @@ export const Healthy = () => {
     "育児支援",
     "ジム",
   ];
+
+  const handlePost = () => {
+    navigate(`/category/test`);
+  };
 
   return (
     <>
@@ -61,7 +69,7 @@ export const Healthy = () => {
         <Reveal keyframes={appear} triggerOnce delay={2000}>
           <Grid container>
             <Grid item xl={4} md={6} sm={12} xs={12}>
-              <ServiceCard delay={2500} />
+              <ServiceCard delay={2500} action={handlePost} />
             </Grid>
             <Grid item xl={4} md={6} sm={12} xs={12}>
               <ServiceCard delay={2500} />

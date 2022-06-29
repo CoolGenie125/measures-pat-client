@@ -1,6 +1,6 @@
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 
-export const HeathlyStyles = makeStyles((theme: Theme) =>
+export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       backgroundColor: "#ebeff2",
