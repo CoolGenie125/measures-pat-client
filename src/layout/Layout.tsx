@@ -14,6 +14,8 @@ import { ErrorRoute } from "pages/ErrorRoute/ErrorRoute";
 import { Category } from "pages/Category/Category";
 import { CategorySlug } from "pages/Category/CategorySlug/CategorySlug";
 import { CategoryEntry } from "pages/Category/CategoryEntry/CategoryEntry";
+import { Register } from "pages/Register/Register";
+import { Login } from "pages/Login/Login";
 
 export default function Layout() {
   const classes = LayoutStyles();
@@ -59,6 +61,8 @@ export default function Layout() {
           <Route path='/usage' element={<Usage />} />
           <Route path='/usage/contact' element={<Contact />} />
           <Route path='/404' element={<ErrorRoute />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/login' element={<Login />} />
         </Routes>
       </div>
       <Footer />
