@@ -1,5 +1,3 @@
-/** @format */
-
 import { Grid } from "@material-ui/core";
 import Breadcrumbs from "components/Breadcrumbs/Breadcrumbs";
 import ServiceCard from "components/ServiceCard/ServiceCard";

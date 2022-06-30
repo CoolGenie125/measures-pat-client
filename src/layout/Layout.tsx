@@ -13,6 +13,7 @@ import { ThankYou } from "pages/ThankYou/ThankYou";
 import { ErrorRoute } from "pages/ErrorRoute/ErrorRoute";
 import { Category } from "pages/Category/Category";
 import { CategorySlug } from "pages/Category/CategorySlug/CategorySlug";
+import { CategoryEntry } from "pages/Category/CategoryEntry/CategoryEntry";
 
 export default function Layout() {
   const classes = LayoutStyles();
@@ -54,6 +55,7 @@ export default function Layout() {
           <Route path='/account/setting/thankyou' element={<ThankYou />} />
           <Route path='/category' element={<Category />} />
           <Route path='/category/:slug' element={<CategorySlug />} />
+          <Route path='/category/:slug/entry' element={<CategoryEntry />} />
           <Route path='/usage' element={<Usage />} />
           <Route path='/usage/contact' element={<Contact />} />
           <Route path='/404' element={<ErrorRoute />} />
