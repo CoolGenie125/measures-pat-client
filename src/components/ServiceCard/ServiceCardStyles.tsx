@@ -3,8 +3,8 @@ import { makeStyles } from "@material-ui/styles";
 export const ServiceCardStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      width: "350px",
-      minWidth: "350px",
+      width: "200px",
+      minWidth: "200px",
       background: "#fff",
       borderRadius: "10px",
       boxShadow: "0px 2px 20px rgb(0 0 0 / 10%)",
@@ -16,10 +16,6 @@ export const ServiceCardStyles = makeStyles((theme: Theme) =>
         boxShadow: "0px 0px 0px rgb(0 0 0 / 10%)",
         transform: "translate(6px, 12px)",
         transitionDuration: "800ms",
-      },
-      [theme.breakpoints.down(450)]:{
-        minWidth: "100%",
-        width: "100%",
       },
     },
     imgRoot: {
@@ -45,7 +41,7 @@ export const ServiceCardStyles = makeStyles((theme: Theme) =>
       position: "absolute",
     },
     cardImg: {
-      height: "180px",
+      height: "130px",
       width: "100%",
     },
     cardDes: {

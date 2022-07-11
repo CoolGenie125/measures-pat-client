@@ -12,20 +12,20 @@ if (localStorage.jwtToken) {
 }
 
 const initialState: authState = {
-  loginStatus: initToken,
+  status: initToken,
   err: "",
 };
 
 const handleLogin = (state: authState, payload: any) => {
   if (payload.Success) {
-    state.loginStatus = true;
+    state.status = true;
   } else {
     state.err = payload.Error.Msg;
   }
 };
 
 const logout = (state: authState) => {
-  state.loginStatus = false;
+  state.status = false;
 };
 
 export const authReducer = createSlice({

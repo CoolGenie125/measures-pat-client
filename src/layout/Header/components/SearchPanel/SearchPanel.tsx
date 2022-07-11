@@ -1,4 +1,4 @@
-import { appear } from "config/utils";
+import { appear } from "config/Animations";
 import Reveal from "react-awesome-reveal";
 import { useStyles } from "./SearchPanelStyles";
 

@@ -1,11 +1,13 @@
 import { Grid } from "@material-ui/core";
 import Breadcrumbs from "components/Breadcrumbs/Breadcrumbs";
 import ServiceCard from "components/ServiceCard/ServiceCard";
+import { useLocation } from "react-router-dom";
 import { UsageCard } from "./component/UsageCard/UsageCard";
 import { UsageStyles } from "./UsageStyle";
 
 export const Usage = () => {
   const classes = UsageStyles();
+  const location = useLocation();
   return (
     <>
       <div className={classes.root}>
@@ -16,7 +18,7 @@ export const Usage = () => {
         <UsageCard />
         <UsageCard />
       </div>
-      <Breadcrumbs />
+      <Breadcrumbs content={location.pathname} />
     </>
   );
 };

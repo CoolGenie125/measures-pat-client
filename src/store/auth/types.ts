@@ -1,5 +1,5 @@
 interface authState {
-  loginStatus: boolean,
+  status: boolean,
   err: "",
 }
 

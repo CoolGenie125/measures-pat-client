@@ -1,16 +1,17 @@
 import { Grid } from "@material-ui/core";
 import Breadcrumbs from "components/Breadcrumbs/Breadcrumbs";
 import ServiceCard from "components/ServiceCard/ServiceCard";
-import { appear, letterDownUp } from "config/utils";
+import { appear, letterDownUp } from "config/Animations";
 import { useState } from "react";
 import Reveal from "react-awesome-reveal";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import CategoryModal from "./CategoryModal/CategoryModal";
 import { useStyles } from "./CategoryStyle";
 
 export const Category = () => {
   const classes = useStyles();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [showCategoryModal, setShowCategoryModal] = useState(false);
 
@@ -27,10 +28,6 @@ export const Category = () => {
     "育児支援",
     "ジム",
   ];
-
-  const handlePost = () => {
-    navigate(`/category/test`);
-  };
 
   return (
     <>
@@ -66,22 +63,22 @@ export const Category = () => {
         </div>
         <Reveal keyframes={appear} triggerOnce delay={2000}>
           <Grid container>
-            <Grid item xl={4} md={6} sm={12} xs={12}>
-              <ServiceCard delay={2500} action={handlePost} />
+            <Grid item lg={3} md={4} sm={6} xs={12}>
+              <ServiceCard cardId="test" delay={2500}/>
             </Grid>
-            <Grid item xl={4} md={6} sm={12} xs={12}>
-              <ServiceCard delay={2500} />
+            <Grid item lg={3} md={4} sm={6} xs={12}>
+              <ServiceCard cardId="test" delay={2500} />
             </Grid>
-            <Grid item xl={4} md={6} sm={12} xs={12}>
-              <ServiceCard delay={2500} />
+            <Grid item lg={3} md={4} sm={6} xs={12}>
+              <ServiceCard cardId="test" delay={2500} />
             </Grid>
-            <Grid item xl={4} md={6} sm={12} xs={12}>
-              <ServiceCard delay={2500} />
+            <Grid item lg={3} md={4} sm={6} xs={12}>
+              <ServiceCard cardId="test" delay={2500} />
             </Grid>
           </Grid>
         </Reveal>
       </div>
-      <Breadcrumbs />
+      <Breadcrumbs content={location.pathname}/>
       <CategoryModal
         show={showCategoryModal}
         onClose={handleCreateClose}

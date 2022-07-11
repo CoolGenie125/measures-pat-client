@@ -7,9 +7,9 @@ function App() {
     breakpoints: {
       values: {
         xs: 0,
-        sm: 600,
-        md: 1200,
-        lg: 1280,
+        sm: 540,
+        md: 1025,
+        lg: 1367,
         xl: 1600,
       },
     },

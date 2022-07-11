@@ -1,5 +1,5 @@
 import Breadcrumbs from "components/Breadcrumbs/Breadcrumbs";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useStyles } from "./CategorySlugStyle";
 import logo from "assets/images/logo.webp";
 import postImg from "assets/images/2.png";
@@ -9,6 +9,7 @@ import ActionButton from "components/ActionButton/ActionButton";
 export const CategorySlug = () => {
   const classes = useStyles();
   const navigate = useNavigate();
+  const location = useLocation();
   const { slug } = useParams();
 
   const handleEntry = () => {
@@ -67,7 +68,7 @@ export const CategorySlug = () => {
           />
         </div>
       </div>
-      <Breadcrumbs />
+      <Breadcrumbs content={location.pathname}/>
     </>
   );
 };

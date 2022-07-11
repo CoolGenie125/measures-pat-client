@@ -1,24 +1,29 @@
 import clsx from "clsx";
-import { slideImg } from "config/utils";
+import { slideImg } from "config/Animations";
 import Reveal from "react-awesome-reveal";
+import { useNavigate, useParams } from "react-router-dom";
 import backImg from "./../../assets/images/2.png";
 import { ServiceCardStyles } from "./ServiceCardStyles";
 
 interface ServiceCardProps {
   delay?: number;
   className?: any;
-  action?: () => void;
+  cardId: string;
 }
 
 export default function ServiceCard({
   delay,
   className,
-  action,
+  cardId,
 }: ServiceCardProps) {
   const classes = ServiceCardStyles();
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(`/category/${cardId}`);
+  };
 
   return (
-    <div className={clsx(classes.root, className)} onClick={action}>
+    <div className={clsx(classes.root, className)} onClick={handleClick}>
       <div className={classes.imgRoot}>
         <Reveal
           keyframes={slideImg}

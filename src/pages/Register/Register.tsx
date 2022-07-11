@@ -1,12 +1,15 @@
 import ActionButton from "components/ActionButton/ActionButton";
 import ActionInput from "components/ActionInput/ActionInput";
 import { useRef, useState } from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { registerUser } from "store/auth";
 import { useStyles } from "./RegisterStyle";
 
 export const Register = () => {
   const classes = useStyles();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [surname, setSurname] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -31,16 +34,17 @@ export const Register = () => {
   };
 
   const handleNext = () => {
-    let inputProps: any = {
-      surname: surname,
-      name: name,
-      phone: phone,
-      img: URL.createObjectURL(importImg),
-      person_email: personEmail,
-      password: password,
-      repassword: repassword,
-    };
-    console.log("register value: ", inputProps);
+    const formData = new FormData();
+    formData.append("surname", surname);
+    formData.append("name", name);
+    formData.append("phone", phone);
+    formData.append("avatar", importImg);
+    formData.append("person_email", personEmail);
+    formData.append("password", password);
+    formData.append("repasswor", repassword);
+    console.log("register : ", formData);
+
+    dispatch(registerUser(formData));
   };
 
   const handleCancel = () => {

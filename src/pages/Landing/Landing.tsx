@@ -6,7 +6,7 @@ import landLetter from "assets/images/landing-letter.webp";
 import { Grid } from "@material-ui/core";
 import ActionButton from "components/ActionButton/ActionButton";
 import { Reveal } from "react-awesome-reveal";
-import { letterDownUp, slideImg } from "config/utils";
+import { letterDownUp, slideImg } from "config/Animations";
 
 export const Landing = () => {
   const classes = LandingStyle();
@@ -31,14 +31,14 @@ export const Landing = () => {
         </Reveal>
         <div className={classes.CardContainer}>
           <Grid container>
-            <Grid item xl={4} md={6} sm={12} xs={12}>
-              <ServiceCard />
+            <Grid item lg={3} md={4} sm={6} xs={12}>
+              <ServiceCard cardId="test" />
             </Grid>
-            <Grid item xl={4} md={6} sm={12} xs={12}>
-              <ServiceCard />
+            <Grid item lg={3} md={4} sm={6} xs={12}>
+              <ServiceCard cardId="test" />
             </Grid>
-            <Grid item xl={4} md={6} sm={12} xs={12}>
-              <ServiceCard />
+            <Grid item lg={3} md={4} sm={6} xs={12}>
+              <ServiceCard cardId="test" />
             </Grid>
           </Grid>
         </div>
@@ -57,14 +57,14 @@ export const Landing = () => {
         </Reveal>
         <div className={classes.CardContainer}>
           <Grid container>
-            <Grid item xl={4} md={6} sm={12} xs={12}>
-              <ServiceCard />
+            <Grid item lg={3} md={4} sm={6} xs={12}>
+              <ServiceCard cardId="test" />
             </Grid>
-            <Grid item xl={4} md={6} sm={12} xs={12}>
-              <ServiceCard />
+            <Grid item lg={3} md={4} sm={6} xs={12}>
+              <ServiceCard cardId="test" />
             </Grid>
-            <Grid item xl={4} md={6} sm={12} xs={12}>
-              <ServiceCard />
+            <Grid item lg={3} md={4} sm={6} xs={12}>
+              <ServiceCard cardId="test" />
             </Grid>
           </Grid>
         </div>

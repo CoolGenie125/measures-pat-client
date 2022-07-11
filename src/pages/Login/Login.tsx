@@ -1,21 +1,23 @@
 import ActionButton from "components/ActionButton/ActionButton";
 import ActionInput from "components/ActionInput/ActionInput";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { loginUser } from "store/auth";
 import { useStyles } from "./LoginStyle";
 
 export const Login = () => {
   const classes = useStyles();
   const navigate = useNavigate();
+  const dispatch =  useDispatch();
   const [personEmail, setPersonEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleNext = () => {
-    let inputProps: any = {
-      person_email: personEmail,
-      password: password,
-    };
-    console.log("login value: ", inputProps);
+    const formData = new FormData();
+    formData.append("email", personEmail);
+    formData.append("password", password);
+    dispatch(loginUser(formData));
   };
 
   return (
@@ -23,9 +25,6 @@ export const Login = () => {
       <div className={classes.modalRoot}>
         <div className={classes.title}>ログインする</div>
         <div className={classes.mainContainer}>
-          {/* <div className={classes.descContainer}>
-            以下の入力を正確に記入してください
-          </div> */}
           <div className={classes.form}>
             <div className={classes.formTitle}>個人的なメール</div>
             <ActionInput

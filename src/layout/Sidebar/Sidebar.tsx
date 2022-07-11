@@ -1,7 +1,6 @@
 import { SidebarStyles } from "./SidebarStyles";
 import LogoImg from "../../assets/images/logo.webp";
 import avatar from "../../assets/images/avatar.png";
-import banner from "../../assets/images/banner.png";
 import { SidbarData } from "config/constant";
 import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -75,13 +74,6 @@ export default function Sidebar({
     navigate(e);
   };
 
-  const handleStudyLink = () => {
-    window.open(
-      "https://studio.design/?utm_source=demo-shisaku-pad.studio.site%2F&utm_medium=STUDIO%20Banner&utm_campaign=STUDIO%20Banner",
-      "_blank"
-    );
-  };
-
   return (
     <>
       <div
@@ -128,9 +120,6 @@ export default function Sidebar({
         <div className={classes.closeRootIcon}>
           <i className='fal fa-times'></i>
         </div>
-      </div>
-      <div className={classes.studyLink} onClick={handleStudyLink}>
-        <img src={banner} className={classes.banner}></img>
       </div>
       {rightPanel ? (
         <>

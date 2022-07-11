@@ -1,10 +1,12 @@
 import ActionButton from "components/ActionButton/ActionButton";
 import ActionSelect from "components/ActionSelect/ActionSelect";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 import { useStyles } from "./CategoryEntryStyle";
 
 export const CategoryEntry = () => {
   const classes = useStyles();
+  const { slug } = useParams();
   const [name, setName] = useState("");
   const [cName, setCName] = useState("");
   const [phone, setPhone] = useState("");
@@ -46,7 +48,8 @@ export const CategoryEntry = () => {
       emailSetting,
       email,
       phone,
-      inquiry
+      inquiry,
+      slug
     );
   };
 
